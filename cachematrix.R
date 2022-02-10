@@ -1,10 +1,17 @@
-## Put comments here that give an overall description of what your
-## functions do
+## #############################################################################
+## These functions store work together to store two matrices, A and its inverse 
+## Ainv as part of the current environment. If A is a large matrix, caching it
+## will improve the access speed. 
+##  
+## #############################################################################
 
-## Write a short comment describing this function
-
+## #############################################################################
+## The makeCacheMatrix function will store both the A and Ainv as environment 
+## variables. It also provides functions to set and get both matrices
+## #############################################################################
 makeCacheMatrix <- function(A = matrix()) {
   Ainv <- NULL
+
   set <- function(B) {
     A <<- B
     Ainv <<- NULL
